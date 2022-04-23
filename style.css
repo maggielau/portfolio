@@ -1,3 +1,13 @@
+:root {
+    --accent-color: #000;
+    --main-color: #FFF;
+}
+
+[data-theme="dark"] {
+    --accent-color: #FFF;
+    --main-color: #000;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,7 +16,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: #000; */
+    background-color: var(--main-color);
+    color: var(--accent-color);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 ul {
@@ -21,6 +33,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .header {
@@ -45,37 +58,92 @@ a {
 
 .nav-buttons {
     display: flex;
-    width: 400px;
+    width: 500px;
     justify-content: space-between;
+    align-items: center;
     margin-right: 20px;
+}
+
+.nav-buttons .icon {
+    display: none;
+    color: var(--accent-color);
+    font-size: 24px;
 }
 
 .nav-button {
     width: 100px;
     height: 50px;
-    background-color: #000;
+    background-color: var(--accent-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFF;
+    color: var(--main-color);
     font-family: 'Ubuntu Mono', monospace;
     font-size: 18px;
 }
 
-.hero-bg {
 
+/* When the screen is less than 600 pixels wide, hide all links. Show the link that should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+.nav-button {
+    display: none;
+}
+.nav-buttons a.icon {
+    float: right;
+    display: block;
+}
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .nav-button.responsive {
+        display: flex;
+        position: absolute;
+        z-index: 7;
+    }
+    a.icon.responsive {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .nav-button.responsive#about-button {
+        top: 80px;
+        right: 20px;
+    }
+
+    .nav-button.responsive#projects-button {
+        top: 140px;
+        right: 20px;
+    }
+
+    .nav-button.responsive#contact-button {
+        top: 200px;
+        right: 20px;
+    }
+
+}
+
+
+
+
+.hero-bg {
+    height: calc(100vh - 95px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero {
-
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
-    margin-top: 100px;
+    margin: 100px 0px 180px;
 }
 
 .hero img{
-    height: 500px;
+    height: 30vw;
 }
 
 .spacer {
@@ -86,80 +154,190 @@ a {
     position: absolute;
     font-family: 'Ubuntu Mono', monospace;
     color: #3B74BA;
-    font-size: 50px;
-    left: 80px;
-    top: 40px;
+    font-size: max(14px, 3vw);
+    left: 3vw;
+    top: 3vw;
 }
 
 #hero-role {
     position: absolute;
     font-family: 'Ubuntu Mono', monospace;
-    color: #000;
+    color: var(--accent-color);
     opacity: 0.6;
-    font-size: 32px;
-    bottom: -50px;
-    left: 40px;
+    font-size: max(14px, 2.2vw);
+    top: 32vw;
+    left: 3vw;
 }
 
 #hero-welcome {
     position: absolute;
     font-family: 'Ubuntu Mono', monospace;
     color: #F04E32;
-    font-size: 50px;
-    right: -20px;
-    bottom: 0px;
+    font-size: max(14px, 3vw);
+    right: 0;
+    top: 26vw;
 }
+
+.fa-circle-chevron-down {
+    color: var(--accent-color);
+    position: absolute;
+    bottom: -15vh;
+    font-size: 45px;
+    transition: .3s;
+}
+
+@media screen and (max-width: 600px) {
+
+    .fa-circle-chevron-down {
+        bottom: -20vh;
+        right: -5vw;
+
+    }
+    
+    
+}
+
+.fa-circle-chevron-down:hover {
+    color: #F0609E;
+}
+
 
 #hero1 {
     position: absolute;
-    left: 15px;
+    left: 1vw;
 }
 
 #hero2 {
     position: absolute;
-    left: 338px;
+    left: 20.5vw;
     animation-delay: 200ms;
 
 }
 
 #hero3 {
     position: absolute;
-    left: 523px;
+    left: 31.5vw;
     animation-delay: 400ms;
 }
 
 #hero4 {
     position: absolute;
-    left: 708px;
+    left: 42.5vw;
     animation-delay: 600ms;
 }
 
 #hero5 {
     position: absolute;
-    left: 890px;
+    left: 53.2vw;
     animation-delay: 800ms;
 }
 
 #hero6 {
     position: absolute;
-    left: 985px;
+    left: 59vw;
     animation-delay: 1000ms;
 }
 
+
+h1 {
+    margin-top: 150px;
+}
+
+h1, h2 {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.about-section, .projects-section {
+    width: 80vw;
+}
+
+.about-section h1,
+.about-section h2{
+    color: #3B74BA;
+}
+
+.projects-section h1, 
+.projects-section h2{
+    color: #F04E32;
+}
+
+.about-section img {
+    width: 20vw;
+}
+
+.about-content {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 3fr;
+    text-align: justify;
+    align-items: center;
+    margin: 30px
+}
+
+.tech-section {
+    grid-row: 2;
+    grid-column: 1 / 3;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80vw;
+}
+
+@media screen and (max-width: 600px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px
+    }
+
+}
+
+
+.placeholder-tech {
+    background-color: var(--accent-color);
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px;
+}
+
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    display: grid;
+
+}
+
+.project-img {
+
+    background-color: #ccc;
+    width: 400px;
+    height: 400px;
+}
+
+
+
 /* Initial page load hero letters fade up animation */
 .hero-fadeup{
-    top:100%;
+    top:150%;
     opacity:0;
-    animation:load_up 2s forwards;
-    -webkit-animation:load_up 2s forwards;
+    animation:load_up .75s forwards;
+    -webkit-animation:load_up .75s forwards;
 }
 
 @keyframes load_up{
-    from{opacity:0;top:100%}
+    from{opacity:1;top:150%}
     to{opacity:1;top:0%;}
     
 }@-webkit-keyframes load_up{
-    from{opacity:0;top:100%}
+    from{opacity:1;top:150%}
     to{opacity:1;top:0%;}
     
 }
@@ -224,7 +402,6 @@ a {
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   }
   .hvr-wobble-to-bottom-right:hover, .hvr-wobble-to-bottom-right:focus, .hvr-wobble-to-bottom-right:active {
     -webkit-animation-name: hvr-wobble-to-bottom-right;
@@ -244,8 +421,8 @@ a {
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     position: relative;
-    background: #000;
-    color: #FFF;
+    background: var(--accent-color);
+    color: var(--main-color);
     -webkit-transition-property: color;
     transition-property: color;
     -webkit-transition-duration: 0.3s;
@@ -284,7 +461,7 @@ background: #F04E32;
     transition-timing-function: ease-out;
 }
 .nav-shutter:hover, .nav-shutter:focus, .nav-shutter:active {
-    color: white;
+    color: var(--main-color);
 }
 .nav-shutter:hover:before, .nav-shutter:focus:before, .nav-shutter:active:before {
     -webkit-transform: scaleY(1);
@@ -294,8 +471,75 @@ background: #F04E32;
 
 
 /* Animated background pixels */
-  .pixel {
+.pixel {
     position: absolute;
     opacity: .8;
     z-index: -1;
+}
+
+
+  /* Toggle switch for dark/light theme */
+  /*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
   }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+  background-image: url("../src/images/togglebg.png");
+
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #444444;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#toggle-li {
+    display: flex;
+}

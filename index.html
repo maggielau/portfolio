@@ -8,17 +8,33 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/886097b534.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <a id="home"></a>
     <div class="content">
         <div class="header">
             <div class="logo"><a href="#home"><img src="../src/images/logo-colour.png" width="80px"></a></div>
-            <ul class="nav-buttons">
+            <ul class="nav-buttons" id="nav-buttons">
+                <li id="toggle-li">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                      </label>
+                    </div>
+                </li>
                 <li><a href="#about"><div class="nav-button nav-shutter" id="about-button">About</div></a></li>
                 <li><a href="#projects"><div class="nav-button nav-shutter" id="projects-button">Projects</div></a></li>
                 <li><a href="#contact"><div class="nav-button nav-shutter" id="contact-button">Contact</div></a></li>
+                <li>
+                    <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="hero-bg">
@@ -33,14 +49,52 @@
                 <img src="../src/images/03.png" class="hero-fadeup hero-letter" id="hero3">
                 <img src="../src/images/02.png" class="hero-fadeup hero-letter" id="hero2">
                 <img src="../src/images/01.png" class="hero-fadeup hero-letter" id="hero1">
+                <a href="#about"><i class="fa-solid fa-circle-chevron-down"></i></a>
+
+            </div>
+
+        </div>
+
+
+        <a id="about"></a>
+        <div class="about-section">
+            <h1>About Me.</h1>
+            <div class="about-content">
+                <img src="../src/images/about-photo.svg">
+                <article>
+                    Vestibulum malesuada fringilla mauris nec congue. Quisque convallis dapibus interdum. Ut eleifend et enim quis tincidunt. Cras ut blandit mi, vitae fermentum ipsum. Ut a urna tincidunt, ultrices ex at, suscipit dui. Integer porta eget arcu quis fermentum. Pellentesque non fermentum sem. Curabitur ultrices feugiat justo, et semper neque facilisis sed. Integer egestas, est cursus pretium eleifend, velit purus interdum justo, id facilisis odio leo non arcu. Ut auctor feugiat blandit. Nam efficitur sagittis quam, at feugiat tortor consectetur tincidunt.
+                </article>
+                <div class="tech-section">
+                    <h2>Tech Stack.</h2>
+                    <div class="tech-icons">
+                        <div class="placeholder-tech"></div>
+                        <div class="placeholder-tech"></div>
+                        <div class="placeholder-tech"></div>
+                        <div class="placeholder-tech"></div>
+                        <div class="placeholder-tech"></div>
+                    </div>
+                </div>
             </div>
         </div>
-            <div class="spacer"></div>
-            <a id="about"></a>About section
-            <div class="spacer"></div>
-            <a id="projects"></a>Project section
-            <div class="spacer"></div>
-            <a id="contact"></a>Contact section
+
+
+        <a id="projects"></a>
+        <div class="projects-section">
+            <h1>Projects.</h1>
+            <div class="projects-display">
+                <div class="project">
+                    <div class="project-img">hi</div>
+                    <h2>Project 1.</h2>
+                    <article>Description of project here</article>
+                    <div>Links here</div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="spacer"></div>
+        <a id="contact"></a>Contact section
 
     </div>
     
