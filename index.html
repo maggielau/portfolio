@@ -15,18 +15,16 @@
 </head>
 <body>
     <a id="home"></a>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+      </label>
+    </div>
     <div class="content">
         <div class="header">
-            <div class="logo"><a href="#home"><img src="../src/images/logo-colour.png" width="80px"></a></div>
+            <div class="logo"><a href="#home"><img src="../src/images/logo-colour.png" width="60px"></a></div>
             <ul class="nav-buttons" id="nav-buttons">
-                <li id="toggle-li">
-                    <div class="theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox" />
-                            <div class="slider round"></div>
-                      </label>
-                    </div>
-                </li>
                 <li><a href="#about"><div class="nav-button nav-shutter" id="about-button">About</div></a></li>
                 <li><a href="#projects"><div class="nav-button nav-shutter" id="projects-button">Projects</div></a></li>
                 <li><a href="#contact"><div class="nav-button nav-shutter" id="contact-button">Contact</div></a></li>
@@ -67,11 +65,42 @@
                 <div class="tech-section">
                     <h2>Tech Stack.</h2>
                     <div class="tech-icons">
-                        <div class="placeholder-tech"></div>
-                        <div class="placeholder-tech"></div>
-                        <div class="placeholder-tech"></div>
-                        <div class="placeholder-tech"></div>
-                        <div class="placeholder-tech"></div>
+                        <div class="tech-icon">
+                            <img src="../src/images/tech-icons/html.png" alt="HTML">
+                            <figcaption>HTML</figcaption>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="../src/images/tech-icons/css.png" alt="CSS">
+                            <figcaption>CSS</figcaption>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="../src/images/tech-icons/js.png" alt="Javascript">
+                            <figcaption>Javascript</figcaption>
+                        </div>                        
+                        <div class="tech-icon">
+                            <img src="../src/images/tech-icons/react.png" alt="React">
+                            <figcaption>React</figcaption>
+                        </div>                        
+                        <div class="tech-icon">
+                            <img src="../src/images/tech-icons/nodejs.png" alt="Node.js">
+                            <figcaption>Node.js</figcaption>
+                        </div>    
+                        <div class="tech-icon">
+                            <img src="../src/images/tech-icons/mongodb.png" alt="MongoDB">
+                            <figcaption>MongoDB</figcaption>
+                        </div>    
+                        <div class="tech-icon">
+                            <img src="../src/images/tech-icons/express.png" alt="Express">
+                            <figcaption>Express</figcaption>
+                        </div>   
+                        <div class="tech-icon">
+                            <img src="../src/images/tech-icons/git.png" alt="Git">
+                            <figcaption>Git</figcaption>
+                        </div>    
+ 
+
+
+
                     </div>
                 </div>
             </div>
@@ -83,18 +112,43 @@
             <h1>Projects.</h1>
             <div class="projects-display">
                 <div class="project">
-                    <div class="project-img">hi</div>
-                    <h2>Project 1.</h2>
-                    <article>Description of project here</article>
-                    <div>Links here</div>
+                    <div class="project-img"><a href="https://github.com/maggielau/CV-project" target="_blank"><img src="../src/images/resume-builder-thumb.png" alt="Resume Builder Thumbnail"></a></div>
+                    <h2>Resume Builder.</h2>
+                    <article>Vestibulum malesuada fringilla mauris nec congue. Quisque convallis dapibus interdum. Ut eleifend et enim quis tincidunt. Cras ut blandit mi, vitae fermentum ipsum. Ut a urna tincidunt, ultrices ex at, suscipit dui. Integer porta eget arcu quis fermentum. Pellentesque non fermentum sem. </article>
+                    <div class="project-links">
+                        <a href="https://github.com/maggielau/CV-project" target="_blank"><div class="project-button nav-shutter">View Code</div></a>
+                        <a href="https://maggielau.github.io/CV-project/" target="_blank"><div class="project-button nav-shutter">Live Demo</div></a>
+                    </div>
                 </div>
             </div>
 
         </div>
 
 
-        <div class="spacer"></div>
-        <a id="contact"></a>Contact section
+
+        <a id="contact"></a>
+        <div class="contact-section">
+            <h1>Contact Me.</h1>
+            <div class="contact-icons">
+                <a href="https://linkedin.com/in/maggie-lau-83b33993" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+                <a href="https://github.com/maggielau" target="_blank"><i class="fa-brands fa-github fa-3x"></i></a>
+                <a href="mailto:maggie.my.lau@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-3x"></i></a>
+            </div>
+            <article>Ut a urna tincidunt, ultrices ex at, suscipit dui. Integer porta eget arcu quis fermentum. </article>
+            <div class="contact-form">
+                <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvolvovg" method="post">
+                    <fieldset id="fs-frm-inputs">
+                      <input type="text" name="name" id="full-name" placeholder="Name" required="">
+                      <input type="email" name="_replyto" id="email-address" placeholder="Email" required="">
+                      <textarea rows="5" name="message" id="message" placeholder="Message" required="" style="resize: none;"></textarea>
+                      <input type="hidden" name="_subject" id="email-subject" value="Portfolio Contact Form Submission">
+                    </fieldset>
+                    <input type="submit" value="Submit" class="submit-button nav-shutter">
+                </form>
+            </div>
+        </div>
+
+        <footer>Maggie Lau © 2022</footer>
 
     </div>
     
