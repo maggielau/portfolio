@@ -259,7 +259,7 @@ h1, h2 {
 }
 
 .about-section, .projects-section, .contact-section {
-    width: 80vw;
+    width: min(80vw, 1500px);
 }
 
 .about-section h1,
@@ -268,7 +268,7 @@ h1, h2 {
 }
 
 .about-section img {
-    width: 20vw;
+    width: clamp(150px ,20vw, 400px);
 }
 
 .about-content {
@@ -289,7 +289,7 @@ h1, h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 80vw;
+    width: min(80vw, 1500px);
 }
 
 @media screen and (max-width: 600px) {
@@ -335,11 +335,8 @@ h1, h2 {
 
 .project {
     display: grid;
-    grid-template-rows: 80px 170px 40px;
+    grid-template-rows: 80px 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    height: 350px;
-    width: 900px;
-
 }
 
 .project article {
@@ -348,14 +345,18 @@ h1, h2 {
 
 .project-img {
     grid-row: 1 / span 4;
-    width: 420px;
-    height: 350px;
-    margin-right: 50px;
+    place-self: center;
+    width: min(30vw, 700px);
+    height: min(calc(30vw * 0.8), 560px);
     box-shadow: -15px -25px 0 0 #F04E32;
     -webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
+}
+
+.project-img img {
+    width: min(30vw, 700px);
 }
 
 .project-img:hover {
