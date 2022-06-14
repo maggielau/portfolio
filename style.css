@@ -263,12 +263,23 @@ h1, h2 {
 }
 
 .about-section h1,
-.about-section h2{
+.about-section h2,
+.about-section strong{
     color: #3B74BA;
 }
 
 .about-section img {
     width: clamp(150px ,20vw, 400px);
+    display: inline;
+    margin: 0 auto;
+}
+
+.about-photo-crop {
+    width: clamp(150px ,20vw, 400px);
+    height: clamp(150px ,20vw, 400px);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 .about-content {
@@ -337,6 +348,7 @@ h1, h2 {
     display: grid;
     grid-template-rows: 80px 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
 }
 
 .project article {

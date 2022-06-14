@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maggie Lau</title>
-    <link rel="icon" type="image/x-icon" href=".src/images/logo.ico">
+    <link rel="icon" type="image/x-icon" href="./src/images/logo.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,9 +59,18 @@
         <div class="about-section">
             <h1>About Me.</h1>
             <div class="about-content">
-                <img src="./src/images/about-photo.svg">
+                <div class="about-photo-crop">
+                    <img src="./src/images/MaggieLProfile_web.jpg">
+                </div>
                 <article>
-                    Vestibulum malesuada fringilla mauris nec congue. Quisque convallis dapibus interdum. Ut eleifend et enim quis tincidunt. Cras ut blandit mi, vitae fermentum ipsum. Ut a urna tincidunt, ultrices ex at, suscipit dui. Integer porta eget arcu quis fermentum. Pellentesque non fermentum sem. Curabitur ultrices feugiat justo, et semper neque facilisis sed. Integer egestas, est cursus pretium eleifend, velit purus interdum justo, id facilisis odio leo non arcu. Ut auctor feugiat blandit. Nam efficitur sagittis quam, at feugiat tortor consectetur tincidunt.
+                    <p>
+                        I am a problem solver, creative thinker and life-long learner with a serious passion for all things web development. 
+                        Excellent team player with strong communication skills and proven project management experience.  
+                        Based out of Toronto ON with a professional background in Mechanical Engineering, I have reskilled and am looking to enter the software industry. 
+                    </p>
+                    <p>
+                        When I'm not at my computer I enjoy motorcycling, indie gaming and making <a href="https://www.instagram.com/maglau.draws" target="_blank"><strong>art</strong></a>.
+                    </p>
                 </article>
                 <div class="tech-section">
                     <h2>Tech Stack.</h2>
@@ -98,7 +107,10 @@
                             <img src="./src/images/tech-icons/git.png" alt="Git">
                             <figcaption>Git</figcaption>
                         </div>    
- 
+                        <div class="tech-icon">
+                            <img src="./src/images/tech-icons/python.png" alt="Python">
+                            <figcaption>Python</figcaption>
+                        </div>    
 
 
 
@@ -112,15 +124,57 @@
         <div class="projects-section">
             <h1>Projects.</h1>
             <div class="projects-display">
+
+                <div class="project">
+                    <div class="project-img"><a href="https://github.com/maggielau/online-shop" target="_blank"><img src="./src/images/online-shop-thumb.png" alt="Online Shop Thumbnail"></a></div>
+                    <h2>Online Shop.</h2>
+                    <article>Mock online store, front end built with React. Products are fetched through API with back end application "Inventory App".</article>
+                    <div class="project-links">
+                        <a href="https://github.com/maggielau/online-shop" target="_blank"><div class="project-button nav-shutter">View Code</div></a>
+                        <a href="https://maggielau.github.io/online-shop/" target="_blank"><div class="project-button nav-shutter">Live Demo</div></a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-img"><a href="https://github.com/maggielau/inventory-application" target="_blank"><img src="./src/images/inventory-app-thumb.png" alt="Inventory App Thumbnail"></a></div>
+                    <h2>Inventory App.</h2>
+                    <article>An inventory management application built with Node.js, Express.js, and MongoDB. Products are served to the front end "Online Shop".</article>
+                    <div class="project-links">
+                        <a href="https://github.com/maggielau/inventory-application" target="_blank"><div class="project-button nav-shutter">View Code</div></a>
+                        <a href="https://calm-mountain-38765.herokuapp.com/" target="_blank"><div class="project-button nav-shutter">Live Demo</div></a>
+                    </div>
+                </div>
+
                 <div class="project">
                     <div class="project-img"><a href="https://github.com/maggielau/CV-project" target="_blank"><img src="./src/images/resume-builder-thumb.png" alt="Resume Builder Thumbnail"></a></div>
                     <h2>Resume Builder.</h2>
-                    <article>Vestibulum malesuada fringilla mauris nec congue. Quisque convallis dapibus interdum. Ut eleifend et enim quis tincidunt. Cras ut blandit mi, vitae fermentum ipsum. Ut a urna tincidunt, ultrices ex at, suscipit dui. Integer porta eget arcu quis fermentum. Pellentesque non fermentum sem. </article>
+                    <article>Generate your own resume with different theme colours. Built with react.</article>
                     <div class="project-links">
                         <a href="https://github.com/maggielau/CV-project" target="_blank"><div class="project-button nav-shutter">View Code</div></a>
                         <a href="https://maggielau.github.io/CV-project/" target="_blank"><div class="project-button nav-shutter">Live Demo</div></a>
                     </div>
                 </div>
+
+                <div class="project">
+                    <div class="project-img"><a href="https://github.com/maggielau/todo-list" target="_blank"><img src="./src/images/todo-thumb.png" alt="Todo App Thumbnail"></a></div>
+                    <h2>To-Do List.</h2>
+                    <article>Keep track of your tasks and projects. Built with vanilla JS. </article>
+                    <div class="project-links">
+                        <a href="https://github.com/maggielau/todo-list" target="_blank"><div class="project-button nav-shutter">View Code</div></a>
+                        <a href="https://maggielau.github.io/todo-list/" target="_blank"><div class="project-button nav-shutter">Live Demo</div></a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-img"><a href="https://github.com/maggielau/Toronto-traffic-analysis" target="_blank"><img src="./src/images/toronto-traffic-analysis-thumb.png" alt="Toronto Traffic Analysis Thumbnail"></a></div>
+                    <h2>Toronto Traffic Analysis.</h2>
+                    <article>Data analysis group project to analyze vehicle collision data from the City of Toronto's traffic database. Built with various Python libraries (NumPy, Pandas, MatPlotLib). </article>
+                    <div class="project-links">
+                        <a href="https://github.com/maggielau/Toronto-traffic-analysis" target="_blank"><div class="project-button nav-shutter">View Code</div></a>
+                        <a href="https://github.com/maggielau/Toronto-traffic-analysis/blob/main/Toronto%20Traffic%20Analysis%20-%202021%2012%2013%20-%20Final.pdf" target="_blank"><div class="project-button nav-shutter">View Report</div></a>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -133,9 +187,10 @@
             <div class="contact-icons">
                 <a href="https://linkedin.com/in/maggie-lau-83b33993" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i></a>
                 <a href="https://github.com/maggielau" target="_blank"><i class="fa-brands fa-github fa-3x"></i></a>
+                <a href="https://www.instagram.com/maglau.draws" target="_blank"><i class="fa-brands fa-instagram fa-3x"></i></a>
                 <a href="mailto:maggie.my.lau@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-3x"></i></a>
             </div>
-            <article>Ut a urna tincidunt, ultrices ex at, suscipit dui. Integer porta eget arcu quis fermentum. </article>
+            <article>Please feel free to reach out to me and I'll get back to you as soon as possible! </article>
             <div class="contact-form">
                 <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvolvovg" method="post">
                     <fieldset id="fs-frm-inputs">
